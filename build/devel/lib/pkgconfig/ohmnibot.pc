@@ -1,0 +1,8 @@
+prefix=/home/nhatduyfirst/catkin_ws/src/ohmnibot/build/devel
+
+Name: ohmnibot
+Description: Description of ohmnibot
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

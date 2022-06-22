@@ -1,0 +1,17 @@
+<launch>
+
+   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
+    <rosparam file="$(find ohmnibot)/config/costmap_common_params.yaml" command="load" ns="global_costmap" /> 
+    <rosparam file="$(find ohmnibot)/config/costmap_common_params.yaml" command="load" ns="local_costmap" />
+    <rosparam file="$(find ohmnibot)/config/local_costmap_params.yaml" command="load" />
+    <rosparam file="$(find ohmnibot)/config/global_costmap_params.yaml" command="load" /> 
+    <rosparam file="$(find ohmnibot)/config/base_local_planner_params.yaml" command="load" />
+    
+    <remap from="tb_cmd_vel" to="/cmd_vel"/>
+    <remap from="tb_control/wheel_odom" to="odom"/>
+ </node>
+ 
+   <node pkg="odometry_publisher" type="odometry_publisher" name="odometry_publisher" output="screen"/>
+   <!--<include file="/home/nhatduyfirst/catkin_ws/src/rplidar_ros/launch/rplidar.launch" /> -->
+
+</launch> 

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- Run Map Server -->
+<node name="map_server" pkg="map_server" type="map_server" args="$(find ohmnibot)/maps/my_map.yaml"/>
+
+<!-- Run AMCL -->
+<include file="$(find ohmnibot)/launch/amcl.launch"/>
+
+<!-- Run Move Base -->
+<include file="$(find ohmnibot)/launch/move_base.launch"/>
+
+</launch>
