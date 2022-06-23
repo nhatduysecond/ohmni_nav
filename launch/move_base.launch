@@ -12,6 +12,6 @@
  </node>
  
    <node pkg="odometry_publisher" type="odometry_publisher" name="odometry_publisher" output="screen"/>
-   <!--<include file="/home/nhatduyfirst/catkin_ws/src/rplidar_ros/launch/rplidar.launch" /> -->
+   <include file="/home/nhatduyfirst/catkin_ws/src/rplidar_ros/launch/rplidar.launch" />
 
 </launch> 
